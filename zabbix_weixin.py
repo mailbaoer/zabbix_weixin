@@ -13,11 +13,11 @@ sys.setdefaultencoding('utf-8')
 # global variables
 
 GATEWAY    = 'https://qyapi.weixin.qq.com/cgi-bin/'
-CROPID     = ''
+CORPID     = ''
 CORPSECRET = ''
 
 def send_weixin(argv):
-  url  = ''.join([GATEWAY, 'gettoken?corpid=', CROPID, '&corpsecret=', CORPSECRET])
+  url  = ''.join([GATEWAY, 'gettoken?corpid=', CORPID, '&corpsecret=', CORPSECRET])
   req  = urllib2.Request(url)
   res  = urllib2.urlopen(req).read()
   hjson= json.loads(res)
